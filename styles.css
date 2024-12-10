@@ -1,111 +1,45 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Robot Neyo - Team Elite</title>
-  <link rel="stylesheet" href="styles.css">
-  <script src="script.js" defer></script>
-</head>
-<body class="dark-theme">
-  <!-- Dark/Light Theme Toggle -->
-  <div class="theme-toggle">
-    <button id="toggle-theme">Switch Theme</button>
-  </div>
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.5s, color 0.5s;
+}
 
-  <!-- Welcome Section -->
-  <section id="welcome">
-    <h1 class="animate">Hello, I am Robot Neyo!</h1>
-    <button id="continue-btn" class="btn">Continue</button>
-  </section>
+.dark-theme {
+  background-color: #121212;
+  color: #ffffff;
+}
 
-  <!-- Chat Icon -->
-  <div class="chat-icon">
-    <button id="chatbot-btn">💬 Chat</button>
-  </div>
+.light-theme {
+  background-color: #ffffff;
+  color: #121212;
+}
 
-  <!-- Chatbot -->
-  <div id="chatbot">
-    <div id="chat-header">Ask Robot Neyo</div>
-    <div id="chat-messages"></div>
-    <input type="text" id="user-input" placeholder="Ask me anything...">
-    <button id="send-btn">Send</button>
-  </div>
+.header {
+  text-align: center;
+  padding: 20px;
+}
 
-  <!-- Feedback Section -->
-  <section id="feedback" class="hidden">
-    <h2>Send Feedback</h2>
-    <form id="feedback-form">
-      <label for="name">Your Name:</label>
-      <input type="text" id="name" required>
-      <label for="team-member">Team Member:</label>
-      <select id="team-member">
-        <option>Adarsh Kumar Singh</option>
-        <option>Virat Soni</option>
-        <option>R2</option>
-        <option>S4</option>
-        <option>S6</option>
-      </select>
-      <label for="message">Message:</label>
-      <textarea id="message" required></textarea>
-      <button type="submit">Send Feedback</button>
-    </form>
-  </section>
+.animated-title {
+  animation: fadeIn 2s ease-in-out;
+}
 
-  <!-- Introduction Section -->
-  <section id="intro">
-    <h2>About Robot Neyo</h2>
-    <p>I am Robot Neyo, developed by Team Elite for the Science and Art/Craft Exhibition at Lucknow Public School Anand Nagar on 28 December 2024.</p>
-    <p>While I'm here in your phone, the real Robot Neyo will be at the exhibition. Don't miss it!</p>
-  </section>
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
 
-  <!-- Features Section -->
-  <section id="features">
-    <h2>Robot Features</h2>
-    <ul>
-      <li>Arduino-Based</li>
-      <li>Obstacle Avoiding</li>
-      <li>Voice Controlled</li>
-      <li>Bluetooth Controlled</li>
-    </ul>
-  </section>
+.chatbot, .feedback-form, .fun-facts {
+  margin: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
 
-  <!-- Team Elite Section -->
-  <section id="team">
-    <h2>Meet Team Elite</h2>
-    <div class="team-member">
-      <h3>Adarsh Kumar Singh</h3>
-      <p>Specialty: Coding and Design</p>
-    </div>
-    <div class="team-member">
-      <h3>Virat Soni</h3>
-      <p>Specialty: Hardware Engineering</p>
-    </div>
-    <div class="team-member">
-      <h3>R2</h3>
-      <p>Specialty: Testing and Debugging</p>
-    </div>
-    <div class="team-member">
-      <h3>S4</h3>
-      <p>Specialty: Robotics Programming</p>
-    </div>
-    <div class="team-member">
-      <h3>S6</h3>
-      <p>Specialty: Project Management</p>
-    </div>
-  </section>
-
-  <!-- Password Facts Section -->
-  <section id="facts">
-    <h2>Discover Facts About Me</h2>
-    <input type="text" id="password-input" placeholder="Enter 4 digits">
-    <button id="reveal-facts">Reveal Facts</button>
-    <p id="facts-display"></p>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <p>© 2024 Team Elite. All rights reserved.</p>
-  </footer>
-</body>
-</html>
+#chat-messages {
+  height: 200px;
+  overflow-y: auto;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+}

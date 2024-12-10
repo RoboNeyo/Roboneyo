@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Robot Neyo - Team Elite</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="dark-theme">
+  <header class="header">
+    <h1 class="animated-title">Hello, I am Robot Neyo</h1>
+    <button id="toggle-theme">Toggle Theme</button>
+  </header>
+  
+  <main class="main-content">
+    <section class="introduction">
+      <p>I am Robot Neyo, developed by Team Elite for the Science and Art Exhibition of Lucknow Public School Anand Nagar on 28 December 2024. Explore my world!</p>
+      <button id="continue-btn">Continue</button>
+    </section>
+    
+    <section id="chatbot" class="chatbot">
+      <div id="chat-messages"></div>
+      <input type="text" id="user-input" placeholder="Ask me anything...">
+      <button id="send-btn">Send</button>
+    </section>
+    
+    <section class="feedback-form">
+      <h2>Submit Feedback</h2>
+      <form id="feedback-form">
+        <input type="text" id="name" placeholder="Your Name" required>
+        <select id="team-member" required>
+          <option value="Adarsh Kumar Singh">Adarsh Kumar Singh</option>
+          <option value="Virat Soni">Virat Soni</option>
+          <option value="R2">R2</option>
+          <option value="S4">S4</option>
+          <option value="S6">S6</option>
+        </select>
+        <textarea id="message" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Feedback</button>
+      </form>
+    </section>
+    
+    <section class="fun-facts">
+      <h2>Enter a 4-digit number to reveal facts</h2>
+      <input type="text" id="password-input" maxlength="4">
+      <button id="reveal-facts">Reveal Facts</button>
+      <p id="facts-display"></p>
+    </section>
+  </main>
+  
+  <script src="script.js"></script>
+</body>
+</html>
